@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.20.15/babel.min.js"></script>
+    
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        // let counter =0;
+        // function countUp() {
+        //     counter +=1;
+        //     render();
+        // }
+        // //계속 리렌더링을 해줘야하기에 좋은 방법이 아님
+        // function render() {
+        //     ReactDOM.render(<Container/>, root);
+        // }
+        function App() {
+            //리렌더링(컴포넌트 재생성)의 역할(modifier이 state를 변경)
+            //[현재값, 데이터를 수정하기 위한 함수]
+            const [counter, setCounter] = React.useState(0);
+            const onClick = () => {
+                // state 세팅1(직접할당)
+                setCounter(counter+1);
+                // state 변경2(함수할당) 더 안전. current가 현재 값이라는 걸 확실히 보장
+                setCounter((current)=> current +1);
+            };
+            return(
+                <div>
+                    <h3>Total clicks : {counter}</h3>
+                    <button onClick={onClick}>Click me</button>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App/>, root);
+    </script>
+</html>
