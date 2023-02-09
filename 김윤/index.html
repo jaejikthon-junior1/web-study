@@ -1,49 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Maker</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <canvas></canvas>
-    <input id="line-width" type="range" min="1" max="10" 
-     value="5" step="0.1" />
-     
-     <input type="color" id="color" />
-    <div 
-     class="color-option" 
-     style="background-color:#FFC312" 
-     data-color="#FFC312"
-    ></div>
-    <div 
-    class="color-option" 
-    style="background-color:#FDA7DF"
-     data-color="#FDA7DF"
-    ></div>
-    <div 
-    class="color-option" 
-    style="background-color:#9980FA" 
-    data-color="#9980FA"
-    ></div>
-    <div 
-    class="color-option" 
-    style="background-color: #B53471" 
-    data-color="#B53471"
-    ></div>
-    <div 
-    class="color-option" 
-    style="background-color:#5758BB" 
-    data-color="#5758BB"
-    ></div>
-    <button id="mode-btn">Fill</button>   
-    <button id="destroy-btn">Destroy</button>   
-    <button id="eraser-btn">Erase</button> 
-    <input type="file" accpet="image/*" id="file" /> 
-    <input type="text" placeholder="Write anad then double click" id="text" />                                     
-    <button id="save">Save image</button>                                 
-    <script src="app.js"></script>
-</body>
+<html>
+   <body>
+    <span>Total clicks: 0</span>
+    <button id="btn">Click me</button>
+   </body>
+   <script>
+    let counter = 0;
+    const button = document.getElementById("btn");
+    const span = document.querySelector("span");
+    function handleClick(){
+      counter = counter + 1;
+      span.innerText = `Total clicks; ${counter}`;
+    }
+    button.addEventListener("click", handleClick);
+   </script>
 </html>
