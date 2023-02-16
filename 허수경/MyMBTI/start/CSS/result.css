@@ -1,0 +1,47 @@
+#result{
+  display: none;  
+  background-color: whitesmoke;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#shareResult{
+  background-color: whitesmoke;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.resultname {
+  font-size: 24px;
+}
+.resultDesc{
+  font-size: 20px;
+}
+
+.kakao{
+  color: white;
+  background-color: #fee500;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 10px;
+}
+
+.kakao:hover, .kakao:focus {
+  background-color: whitesmoke;
+  color: #fee500;
+}
+
+.gohome{
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 10px;
+}
+
+.gohome:hover, .gohome:focus {
+  background-color: whitesmoke;
+  color: black;
+}
